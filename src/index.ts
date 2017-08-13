@@ -6,7 +6,7 @@ new Vue({
   components: {
     draggable
   },
-  template: `<div><draggable v-model="items">
+  template: `<div><draggable v-model="items" v-bind:move="onMoved" @end="onEnd">
               <transition-group>
                   <div v-for="item in items" :key="item.id">
                       {{item.name}}
@@ -24,7 +24,19 @@ new Vue({
       ]
     }
   },
-  mounted() {
-    console.log('mounted')
+  methods: {
+    onMoved(event, originalEvent) {
+      return false
+    },
+    onEnd(event, originalEvent) {
+      Vue.set(this, 'items', [
+        { id: '2', name: 'lemon'},
+        { id: '1', name: 'apple'},
+        { id: '3', name: 'banana'},
+        { id: '4', name: 'orange'},
+        { id: '5', name: 'melon'}
+      ])
+      return true
+    }
   }
 })
