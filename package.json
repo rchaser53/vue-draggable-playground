@@ -1,0 +1,40 @@
+{
+  "name": "vue-draggable-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --port 3000",
+    "vuetype": "vuetype"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rchaser53/vue-draggable-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rchaser53/vue-draggable-playground/issues"
+  },
+  "homepage": "https://github.com/rchaser53/vue-draggable-playground#readme",
+  "dependencies": {
+    "vue": "^2.4.2",
+    "vuedraggable": "^2.14.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "css-loader": "^0.28.4",
+    "html-loader": "^0.5.1",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.2",
+    "typescript": "^2.4.2",
+    "vue-class-component": "^5.0.2",
+    "vue-loader": "^13.0.4",
+    "vue-template-compiler": "^2.4.2",
+    "vuetype": "^0.2.2",
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
