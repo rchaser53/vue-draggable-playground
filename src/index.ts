@@ -1,18 +1,31 @@
 import * as Vue from 'vue'
 import * as draggable from 'vuedraggable'
 
-new Vue({
+declare module 'vue/types/vue' {
+  interface Vue {
+    items: {
+      id: string;
+      name: string;
+    }[];
+  }
+}
+
+new Vue ({
   el: '#app',
   components: {
     draggable
   },
-  template: `<div><draggable v-model="items" v-bind:move="onMoved" @end="onEnd">
-              <transition-group>
-                  <div v-for="item in items" :key="item.id">
-                      {{item.name}}
-                  </div>
-              </transition-group>
-            </draggable></div>`,
+  template: `<div>
+              <draggable v-model="items" v-bind:move="onMoved" @end="onEnd">
+                <transition-group>
+                    <div v-for="item in items" :key="item.id">
+                        {{item.name}}
+                    </div>
+                </transition-group>
+              </draggable>
+              <div v-on:click="higepon">nya-n</div>
+            </div>
+            `,
   data() {
     return {
       items: [
