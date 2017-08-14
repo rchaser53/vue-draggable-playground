@@ -50,6 +50,12 @@ new Vue ({
         { id: '5', name: 'melon'}
       ])
       return true
+    },
+    higepon() {
+      console.log(132)
+      Vue.set(this.items[0], 'name', 'daidageki');
+
+
     }
   }
 })
